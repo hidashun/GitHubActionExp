@@ -2,10 +2,8 @@ name: caller1
 on: [push]
 jobs:
   caller1:
-    runs-on: macos-12
-    timeout-minutes: 3
-    uses: hidashun/GitHubActionExp/.github/workflows/callee@main
-      with:
-        config-path: this/is/config/path
-      secrets:
-        envPAT: hogehoge
+    uses: ./callee.yml
+    with:
+      config-path: this/is/config/path
+    secrets:
+      envPAT: hogehoge
