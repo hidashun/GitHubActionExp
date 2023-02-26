@@ -2,5 +2,8 @@ name: caller1
 on: [push]
 jobs:
   caller1:
-    steps:
-      - run: echo "test"
+    uses: ./callee.yml@main
+    with:
+      config-path: this/is/config/path
+    secrets:
+      envPAT: hogehoge
