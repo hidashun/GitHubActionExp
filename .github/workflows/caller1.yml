@@ -2,8 +2,10 @@ name: caller1
 on: [push]
 jobs:
   caller1:
-    uses: hidashun/GitHubActionExp.git/.github/workflows/callee.yml@other-branch
-    with:
-      config-path: this/is/config/path
-    secrets:
-      envPAT: hogehoge
+    steps:
+      - uses: actions/checkout
+      - uses: hidashun/GitHubActionExp.git/.github/workflows/callee.yml@other-branch
+        with:
+          config-path: this/is/config/path
+        secrets:
+          envPAT: hogehoge
