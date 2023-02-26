@@ -1,0 +1,8 @@
+name: caller1
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: macos
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Caller 1"
