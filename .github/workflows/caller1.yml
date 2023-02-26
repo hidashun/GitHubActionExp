@@ -1,4 +1,4 @@
-name: experiment
+name: caller1
 on: [push]
 jobs:
   caller1:
@@ -7,3 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo "Caller 1"
+      - uses: hidashun/GitHubActionExp/.github/workflows/callee@main
+        with:
+          config-path: this/is/config/path
+        secrets:
+          envPAT: hogehoge
