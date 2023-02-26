@@ -2,7 +2,7 @@ name: caller1
 on: [push]
 jobs:
   caller1:
-    uses: hidashun/GitHubActionExp.git/.github/workflows/callee.yml@main
+    uses: hidashun/GitHubActionExp.git/.github/workflows/callee.yml
     with:
       config-path: this/is/config/path
     secrets:
